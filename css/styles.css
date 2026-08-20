@@ -1114,6 +1114,16 @@ nav.main a[aria-current="page"] {
   margin-bottom: 4px;
 }
 
+.pickup-kicker {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+
 .pickup p {
   max-width: 52rem;
   font-size: 16px;
@@ -1156,7 +1166,7 @@ nav.main a[aria-current="page"] {
     grid-row: 1;
   }
 
-  .pickup p {
+  .pickup p:not(.pickup-kicker) {
     grid-column: 2;
     grid-row: 2;
   }
@@ -1165,6 +1175,30 @@ nav.main a[aria-current="page"] {
     grid-column: 3;
     grid-row: 1;
     justify-self: end;
+  }
+
+  .pickup:has(.pickup-kicker) .row {
+    grid-template-rows: auto auto auto;
+    row-gap: 2px;
+  }
+
+  .pickup-kicker {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .pickup:has(.pickup-kicker) h2 {
+    grid-row: 2;
+    margin-bottom: 2px;
+  }
+
+  .pickup:has(.pickup-kicker) p:not(.pickup-kicker) {
+    grid-row: 3;
+  }
+
+  .pickup:has(.pickup-kicker) .btn {
+    grid-row: 1 / -1;
+    align-self: center;
   }
 }
 
@@ -1258,7 +1292,12 @@ nav.main a[aria-current="page"] {
   padding-bottom: 56px;
 }
 
-.links-board__copy h1 {
+.links-board__head {
+  grid-column: 1 / -1;
+}
+
+.links-board__copy h1,
+.links-board__head h1 {
   color: var(--white);
   font-size: clamp(2rem, 4vw, 2.8rem);
   letter-spacing: 0.06em;
@@ -1269,6 +1308,24 @@ nav.main a[aria-current="page"] {
   display: inline-block;
   width: auto;
   max-width: 100%;
+}
+
+.links-board__kicker {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+
+.links-board__intro {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .check-list {
@@ -1322,6 +1379,27 @@ nav.main a[aria-current="page"] {
   max-width: 40rem;
 }
 
+.links-board__grips {
+  margin-top: 8px;
+  padding-top: 28px;
+  border-top: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.links-board__grips h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  letter-spacing: 0.04em;
+  color: var(--lime);
+}
+
+.links-board__grips p {
+  margin: 0 0 18px;
+  font-size: 17px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 36rem;
+}
+
 .links-board__actions {
   display: flex;
   flex-direction: column;
@@ -1344,10 +1422,17 @@ nav.main a[aria-current="page"] {
 
 .links-process {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: stretch;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-content: start;
   min-height: 100%;
+}
+
+.links-process__heading {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  letter-spacing: 0.04em;
+  color: var(--lime);
 }
 
 .links-process__img {
@@ -1372,21 +1457,21 @@ nav.main a[aria-current="page"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 14px;
 }
 
-/* Rinks board (match live RINKS / Hockey Services page) */
+/* Rinks board (Hockey Services — same head + two-column layout as Links) */
 .rinks-board__grid {
-  grid-template-columns: auto minmax(0, 1.15fr) minmax(260px, 0.9fr);
-  gap: 40px 36px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.9fr);
+  gap: 40px 48px;
 }
 
-.rinks-board__vert {
-  color: var(--sky);
-  grid-row: 1 / -1;
-}
-
-.rinks-board .links-board__copy h1 {
+.rinks-board .links-board__head h1 {
   border-bottom-color: var(--sky);
+}
+
+.rinks-board .links-board__kicker {
+  color: var(--sky);
 }
 
 .check-list--rinks {
@@ -1414,6 +1499,14 @@ nav.main a[aria-current="page"] {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: none;
+}
+
+.check-list__title--links {
+  color: var(--lime);
+}
+
+.check-list__body {
+  display: block;
 }
 
 .check-list__sub {
@@ -1999,14 +2092,6 @@ footer.site h2 {
 
   .map-hotspot {
     top: 45%;
-  }
-
-  .links-process {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-
-  .links-process__vert {
-    font-size: clamp(2.8rem, 14vw, 4.5rem);
   }
 }
 
