@@ -275,8 +275,8 @@ nav.main a[aria-current="page"] {
 .header-cta .btn:hover {
   filter: none;
   background: transparent;
-  color: var(--lime-dark);
-  border-color: var(--lime-dark);
+  color: var(--sky);
+  border-color: var(--sky);
 }
 
 .nav-toggle {
@@ -982,7 +982,7 @@ nav.main a[aria-current="page"] {
 
 .reviews-foot {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 18px;
 }
 
