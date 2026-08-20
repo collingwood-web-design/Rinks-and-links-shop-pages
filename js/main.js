@@ -166,3 +166,30 @@
     go(0);
   });
 })();
+
+(function () {
+  var rules = document.querySelectorAll("[data-section-rule]");
+  if (!rules.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    rules.forEach(function (rule) {
+      rule.classList.add("is-in");
+    });
+    return;
+  }
+
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  rules.forEach(function (rule) {
+    io.observe(rule);
+  });
+})();
