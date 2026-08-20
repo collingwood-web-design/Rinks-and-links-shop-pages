@@ -66,39 +66,6 @@
       </div>
     </section>
 
-    <section class="features" aria-label="Why Rinks and Links">
-      <div class="wrap grid">
-        <article class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-          <div>
-            <h3>Local expertise</h3>
-            <p>Proudly serving Collingwood and the surrounding area.</p>
-          </div>
-        </article>
-        <article class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4.4l2.6 1.6"/></svg>
-          <div>
-            <h3>Fast turnaround</h3>
-            <p>Quality service done quickly and right.</p>
-          </div>
-        </article>
-        <article class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
-          <div>
-            <h3>Pick-up &amp; drop-off</h3>
-            <p>Within 10 miles of Collingwood for clubs or 4+ pairs of skates.</p>
-          </div>
-        </article>
-        <article class="feature">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.4-3.2 3.9-4.8 7-4.8S17.6 15.8 19 19"/></svg>
-          <div>
-            <h3>Personal service</h3>
-            <p>Friendly, reliable service from Colin personally.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <section class="split" aria-label="Services">
       <article class="split__panel split__panel--links">
         <p class="split__vert">
@@ -117,8 +84,21 @@
         </div>
         <p class="split__note">Price list and approx. times for services (Prices are subject to HST).</p>
         <a class="btn btn-lime" href="links.html">View Golf Services</a>
-        <div class="split__photo">
-          <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/grips.jpg" width="800" height="1200" alt="Golf club grips ready for install" />
+        <div class="split__photo photo-carousel" data-photo-carousel>
+          <div class="photo-carousel__viewport">
+            <div class="photo-carousel__track">
+              <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/golf.jpg" width="800" height="1200" alt="Golf clubs ready for service at Rinks and Links" />
+              <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/golf-2.jpg" width="800" height="1200" alt="Golf club work in the Collingwood shop" />
+              <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/grips.jpg" width="800" height="1200" alt="Golf club grips ready for install" />
+            </div>
+            <button class="photo-carousel__nav photo-carousel__nav--prev" type="button" aria-label="Previous golf photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+            </button>
+            <button class="photo-carousel__nav photo-carousel__nav--next" type="button" aria-label="Next golf photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+          <div class="photo-carousel__dots"></div>
         </div>
       </article>
       <article class="split__panel split__panel--rinks">
@@ -133,36 +113,104 @@
             <li>Skate Profiling – Coming Fall 2026</li>
             <li>Rivet Repair</li>
             <li>Holder Replacement</li>
+            <li>Loyalty card</li>
           </ul>
         </div>
         <p class="split__note">Price list and approx. times for services (Prices are subject to HST).</p>
         <a class="btn btn-sky" href="rinks.html">View Hockey Services</a>
-        <div class="split__photo">
-          <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/skate-sharpen.jpg" width="800" height="1200" alt="Hockey skate being sharpened" />
+        <div class="split__photo photo-carousel photo-carousel--rinks" data-photo-carousel>
+          <div class="photo-carousel__viewport">
+            <div class="photo-carousel__track">
+              <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/colin.jpg" width="800" height="1200" alt="Colin Newman sharpening skates in the shop" />
+              <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/skate.jpg" width="800" height="1200" alt="Hockey skate ready for sharpening" />
+              <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/loyalty.jpg" width="800" height="1200" alt="Hockey service at Rinks and Links in Collingwood" />
+            </div>
+            <button class="photo-carousel__nav photo-carousel__nav--prev" type="button" aria-label="Previous hockey photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+            </button>
+            <button class="photo-carousel__nav photo-carousel__nav--next" type="button" aria-label="Next hockey photo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+          <div class="photo-carousel__dots"></div>
         </div>
       </article>
+    </section>
+
+    <section class="features" aria-label="Why Rinks and Links">
+      <div class="wrap grid">
+        <article class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <div>
+            <h3>Local expertise</h3>
+            <p>Proudly serving Collingwood and the surrounding area.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4.4l2.6 1.6"/></svg>
+          <div>
+            <h3>Fast turnaround</h3>
+            <p>Quality service done quickly and right.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div>
+            <h3>Shop hours</h3>
+            <p>Mon–Sat 10am–8pm, Sunday 10am–6pm.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.4-3.2 3.9-4.8 7-4.8S17.6 15.8 19 19"/></svg>
+          <div>
+            <h3>Personal service</h3>
+            <p>Friendly, reliable service from Colin personally.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="reviews" aria-labelledby="reviews-title">
       <div class="wrap">
         <h2 id="reviews-title">What our customers say</h2>
-        <div class="reviews-row">
-          <div class="review-summary">
-            <strong>Excellent</strong>
-            <div class="stars" aria-label="5 stars">★★★★★</div>
-            <p>Based on 10 Google reviews</p>
-          </div>
-          <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>Kyle Millar</h3>
-            <p>Colin was amazing. We were in a bind to get our daughter’s skates sharpened and he was able to help us asap. Did a great job. Highly recommend.</p>
-          </article>
-          <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <h3>enza giordano</h3>
-            <p>His skate sharpening skills are second to none. Colin makes sure the edges are perfectly even and tailored to your skating style. You can tell he truly cares about the quality of his work.</p>
-          </article>
+        <div class="review-summary">
+          <strong>Excellent</strong>
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p>Based on 10 Google reviews</p>
         </div>
+        <div class="reviews-carousel" data-reviews>
+          <button class="reviews-nav reviews-nav--prev" type="button" aria-label="Previous reviews">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+          </button>
+          <div class="reviews-viewport">
+            <div class="reviews-track">
+              <article class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>Kyle Millar</h3>
+                <p>Colin was amazing. We were in a bind to get our daughter’s skates sharpened and he was able to help us asap. Did a great job. Highly recommend.</p>
+              </article>
+              <article class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>enza giordano</h3>
+                <p>His skate sharpening skills are second to none. Colin makes sure the edges are perfectly even and tailored to your skating style. You can tell he truly cares about the quality of his work.</p>
+              </article>
+              <article class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>J Francisco</h3>
+                <p>My skates felt weird after getting them sharpened at another place so I came here and they fixed everything. Highly recommend!</p>
+              </article>
+              <article class="review-card">
+                <div class="stars">★★★★★</div>
+                <h3>Michael Nederend</h3>
+                <p>Friendly, accommodating, and excellent service! Quick turnaround on installing new iron grips—super impressed with the professionalism and attention to detail. I won’t be going to Golf Town for my golf service needs anymore!</p>
+              </article>
+            </div>
+          </div>
+          <button class="reviews-nav reviews-nav--next" type="button" aria-label="Next reviews">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="reviews-dots" data-reviews-dots></div>
         <div class="reviews-foot">
           <a class="btn btn-lime" href="https://www.google.com/maps/search/?api=1&amp;query=Rinks+and+Links+14+Bassett+St+Collingwood" target="_blank" rel="noopener">View Google reviews</a>
         </div>
@@ -173,8 +221,8 @@
       <div class="wrap about-grid">
         <img src="https://media.cwd-cdn.com/rinks-and-links-shop/images/colin-shop.jpg" width="1280" height="854" alt="Colin Newman in the Rinks and Links workshop" />
         <div>
-          <h2>Local service. Serious know-how.</h2>
           <p class="kicker">Meet Colin Newman</p>
+          <h2>Local service. Serious know-how.</h2>
           <p>Colin Newman, owner of Rinks and Links, has more than 25 years of experience sharpening skates and servicing equipment. After a career in sporting goods retail, he and his wife moved to Collingwood and turned that know-how into a small shop built on personal service.</p>
           <p>Whether it is hockey players gearing up for a game or golfers looking for a better feel on the club, Colin takes pride in work that keeps people performing at their best — one pair of skates or one set of clubs at a time.</p>
           <a class="btn btn-blue btn-hover-lime" href="https://enterprisecentre.ca/from-passion-to-pro-service-meet-colin-newman-of-rinks-and-links/" target="_blank" rel="noopener">Read Colin’s story</a>
