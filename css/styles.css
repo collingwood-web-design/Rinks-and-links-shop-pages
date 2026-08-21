@@ -2032,6 +2032,8 @@ footer.site h2 {
 
   header.site .bar {
     grid-template-columns: auto 1fr;
+    height: auto;
+    min-height: var(--header-h);
   }
 
   nav.main {
@@ -2040,7 +2042,9 @@ footer.site h2 {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
-    padding: 0 0 18px;
+    padding: 12px 0 18px;
+    background: #000e3e;
+    width: 100%;
   }
 
   nav.main.is-open {
